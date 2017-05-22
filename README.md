@@ -1,4 +1,4 @@
-####Encryption/Decryption
+#### Encryption/Decryption
 
 Public-key cryptography, also known as asymmetric cryptography, is a method of ensuring that data is private and verified when sent from one destination to another. 
 
@@ -6,22 +6,22 @@ When we use the term **key** we really refer to a specific mathematical algorith
 
 
 
-####Public Key Encryption Example
+#### Public Key Encryption Example
 We have two friends named Alice and Bob.  Alice wants to send Bob a message, however she wants to encrypt her message so that only Bob can decipher and read it.  Bob has provided her and everyone else in the world with a publicly available key that will encrypt her message.  His **public** key that he has distributed encrypts the data in a very particular manner that is impossible to decipher unless you have the matching **private** key. Bob does **not** distribute his private key and keeps it a secret.
 
 When Bob receives the message from Alice, his special **private** key is the only key with the ability to decipher the message that the **public** key encrypts.  It's a two-piece system; there's no way to decrypt a public-key encrypted file unless you have the private key.
 
  ![](http://www.itgstextbook.com/chapter5-security/public-key-encryption.png)
 
-####Message Authentication
+#### Message Authentication
 If Bob wants to send Alice a response to make sure he received the message, he can perform the above encryption in reverse.  Bob can encrypt his message with his **private** key and send it off.  It should be noted, however, that anyone with Bob's **public** key can decipher his message.  This is a vulnerability, however Bob only cares about making sure that Alice knows that it was truly Bob that sent this new message.  **Private** key encrypted files can only be decrypted with **public** keys.  Since Bob is diligent about keeping his **private** key guarded, we know hat any message sent with his private key encryption is truly from him.
 
-###Question
+### Question
 
 How can we ensure that only Alice can read Bob's authentic **private** key encrypted message?
 
 
-###Keeping passwords truly safe
+### Keeping passwords truly safe
 To keep your passwords difficult for hackers to guess, they will oftentimes 'hash' your original password into a difficult to guess string of letters and numbers.  To 'hash' something in the the encryption world refers to making something unique yet indecipherable.  Once data is hashed, it is impossible to 'un-hash' it.  
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cryptographic_Hash_Function.svg/2000px-Cryptographic_Hash_Function.svg.png)
@@ -37,6 +37,6 @@ To counter rainbow tables, websites began using a technique called **salting** w
 
 *We can still do our part!  To make it extremely difficult for computers to guess your password, consider using 4 random words strung together.*  
 
-###Other Resources
+### Other Resources
 
 One of the most commonly used encryption algorithms is bcrypt. See the `bcrypt-ruby` gem's [explanation for how  bcrypt works](https://github.com/codahale/bcrypt-ruby#how-bcrypt-works). (There's also a [`bcrypt` node module](https://www.npmjs.com/package/bcrypt).)
